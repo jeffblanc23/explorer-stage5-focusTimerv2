@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-color: #FFF;
+    
+    --bg-marked-color: hsla(194, 97%, 31%, 1);
+    --bg-unmarked-color: hsla(240, 9%, 89%, 1);
+    
+    --img-marked-color: #FFFFFF;
+    --img-unmarked-color: #323238;
+
+    --text-color: #323238;
+
+    font-size:  62.5%;
+}
+
+body {
+    background-color: var(--bg-color);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 82.1rem;
+
+    gap: 19.2rem;
+
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.buttons button svg {
+    width: clamp(3.2rem, 2rem + 12vw, 4.8rem);   
+}
+
+footer button svg {
+    width: clamp(3.2rem, 2rem + 12vw, 13.8rem);   
+    height: clamp(3.2rem, 2rem + 12vw, 15.2rem);  
+    
+    color: var(--marked-color)
+}
+
+footer button svg.marked path#bg  {
+    fill: var(--bg-marked-color);
+
+}
+
+footer button svg.marked path#img {
+    fill: var(--img-marked-color);
+}
+
+main {
+    display: grid;
+    position: relative;
+       
+}
+
+#timer, #timer .set {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    font-size: clamp(4rem, 4rem + 10vw, 12.666rem);
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+}
+
+#controls {
+    background-color: transparent;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+    border-radius: 999.9rem;
+
+    width: clamp(40rem, 30rem + 30vw, 31.2rem);
+    height: clamp(8rem, 5rem + 10vw, 10.8rem);
+}
+
+footer {
+    display: flex;  
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: row wrap;
+
+    width: 30%;
+
+    gap: 3.2rem;
+}
